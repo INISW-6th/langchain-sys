@@ -7,7 +7,12 @@ from rag_components.reranker import BgeReranker, CohereReranker
 from rag_components.llm import get_hf_llm
 from config import LLM_MODEL_MAP, SYSTEM_PROMPT_MAP
 from langchain_community.vectorstores import FAISS
-
+# 1. RAG 파이프라인 클래스는 외부에서 인자로 전달받음
+# 2. 평가에 사용할 프롬프트를 파일 내에서 정의
+# 3. RAG 답변 생성 (invoke를 사용하여 문서 검색)
+# 4. RAGAS 평가용 데이터셋 생성
+# 5. RAGAS 평가 실행
+# 6. 평가 결과 출력
 class ModularRAG:
     def __init__(self, config: Dict[str, Any], docs: Dict[str, List[Document]]):
         self.config, self.docs = config, docs
