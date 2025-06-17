@@ -1,6 +1,12 @@
 import os, glob, json, re
 from typing import Dict, List
 from langchain.schema import Document
+# 1. 지정된 경로에서 모든 JSON 파일 탐색  
+# 2. 파일 이름에서 목적(purpose) 추출 (언더스코어 앞 부분)  
+# 3. JSON 파일을 로드하여 텍스트와 메타데이터 가져옴  
+# 4. 각 항목을 LangChain Document 객체로 변환하고 source_file 추가  
+# 5. 목적별로 문서들을 딕셔너리 형태로 저장 및 반환  
+
 def load_purpose_docs(data_path: str) -> Dict[str, List[Document]]:
     json_files = glob.glob(f"{data_path}/*.json")
     purpose_docs = {}
