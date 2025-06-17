@@ -17,14 +17,34 @@
 
 ## 프로젝트 구조
 ```
-ipynb (Colab 노트북)
-├── server.py       # API 서버 (FastAPI + ngrok)
-├── worker.py       # LLM 워커 (RAG 처리)
-├── config.py       # 설정값 관리
-├── ModularRAGExperiment.py # RAG 핵심 로직
-├── prompts/        # 프롬프트 템플릿 저장소
-├── queue.json      # 처리 대기 중인 질문 목록
-└── answers.json    # 처리 완료된 답변 목록
+.
+│
+├── 📁 data/
+│   ├── 민족대백과_data.json
+│   └── 교과서_data.json
+│
+├── 📁 eval/
+│   ├── custom_judge_evaluator.py
+│   └── ragas_evaluator.py
+│   ├── run_with_custom_judge.py
+│   └── run_full_evaluation.py
+│
+├── 📁 rag_components/
+│   ├── __init__.py
+│   ├── chunker.py
+│   ├── embedder.py
+│   ├── llm.py
+│   ├── loader.py
+│   └── reranker.py
+│
+├── 🔑 .env
+├── ⚙️ config.py
+├── 📝 prompts.json
+├── 📦 requirements.txt
+│
+├── ⛓️ rag_pipeline.py
+├── 🚀 server.py
+└── 📜 schemas.py
 ```
 
 # 한국어 역사문서 기반 RAG 실험 시스템
