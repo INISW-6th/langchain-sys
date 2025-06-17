@@ -2,7 +2,7 @@ from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from typing import List, Dict
 import copy
-
+# 이 코드는 텍스트 데이터를 메타데이터와 함께 지정된 길이로 나누는 기능을 수행합니다.
 class MetadataChunkGenerator:
     def __init__(self, chunk_size: int = 1000, chunk_overlap: int = 200):
         self.chunk_size = chunk_size
