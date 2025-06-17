@@ -6,12 +6,12 @@
 
 해당 프로젝트에서는 [**평가**](https://github.com/INISW-6th/langchain-eval)를 통해 다음 기능을 위해 아래와 같은 기법과 모델을 사용합니다.
 
-| 단계 | 활용 자료 | 프롬프트 기법 | 모델 설정 | 내용 |
-| :-: | :-: | :-: | :-: | :-: |
-| **수업자료 생성** | `교과서` `판서` `사료` `지도서` | `CoT` `Prompt Chaining` | `ko-sroberta-multitask` `FAISS` `EXAONE-3.5-7.8B` | - |
-| **내용 요약** | `교과서` `판서` `사료` | `Prompt Chaining` | `KoSimCSE-roberta` `ChromaDB` `BGE` `EXAONE-3.5-7.8B` | - |
-| **기승전결 맥락** | `교과서` `판서` `사료` | `ToT` `Prompt Chaining` | `KoSimCSE-roberta` `ChromaDB` `BGE` `EXAONE-3.5-7.8B` | - |
-| **시나리오 작성** | `교과서` `판서` `사료` | `ToT` `Prompt Chaining` | `KoSimCSE-roberta` `ChromaDB` `EXAONE-3.5-7.8B` | - |
+| 단계 | 활용 자료 | 프롬프트 기법 | 모델 설정 |
+| :-: | :-: | :-: | :-: |
+| **내용 요약** | `교과서` `판서` `사료` | `Prompt Chaining` | `ko-sroberta-multitask` `FAISS` `BGE` `EXAONE-3.5-7.8B` |
+| **수업자료 생성** | `판서` `사료` `지도서` | `CoT` `Prompt Chaining` | `ko-sroberta-multitask` `FAISS` `BGE` `EXAONE-3.5-7.8B` |
+| **기승전결 맥락** | `교과서` `판서` `사료` | `ToT` `Prompt Chaining` | `ko-sroberta-multitask` `FAISS` `BGE` `EXAONE-3.5-7.8B` |
+| **시나리오 작성** | `교과서` `판서` `사료` | `ToT` `Prompt Chaining` | `ko-sroberta-multitask` `FAISS` `BGE` `EXAONE-3.5-7.8B`  |
 | **삽화 생성** | `교과서` | `Prompt with Constraints` | `DALLE3` | - |
 
 
