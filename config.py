@@ -11,7 +11,7 @@ if HF_TOKEN:
     except Exception as e:
         print(f"Hugging Face 로그인 실패: {e}")
 
-DATA_PATH = "/content/drive/MyDrive/Textbook-Data/rag적용"
+DATA_PATH = ""
 
 RAG_CONFIG = {
     "chunking": {"method": "custom", "chunk_size": 700, "chunk_overlap": 140},
